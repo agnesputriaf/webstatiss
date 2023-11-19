@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>PEDULI KITA</title>
+    <link rel="stylesheet" type="text/css" href="Agnes_Putri_Afdzilla.css">
+    <link rel="icon" href="gambaruts/PEDULI_KITA.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!--Link JS-->
+<script src="Agnes_Putri_Afdzilla.js"></script>
+<header>
+        <img src="gambaruts/PEDULI_KITA.png" alt="logo" width="90px" style="padding-left: 30px;">
+        <h2 style="text-align: left;">Peduli Kita</h2>
+    <i class='bx bx-menu' id="menu-icon" ></i>
+   <ul class="navbar" type="none">
+        <li><a href="Agnes_Putri_Afdzilla.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+   </ul>
+   
+   <div class="search-box">
+        <input type="search" name="" placeholder="Cari Disini...">
+   </div>
+   <div class="header-icon">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</div>
+</header>
+
+
+<h1 style="margin-top: 10%;">Mari Gabung Bersama Kami!<h1>
+<div class="jamdigital">
+    <div id="jam">00</div>
+    <span>:</span>
+    <div id="menit">00</div>
+    <span>:</span>
+    <div id="detik">00</div>
+</div>
+
+<script>
+var jam= document.getElementById("jam")
+var menit= document.getElementById("menit")
+var detik= document.getElementById("detik") 
+
+var jamdigital= setInterval(
+function time(){
+    var date_now= new Date();
+    var jm= date_now.getHours();
+    var mn= date_now.getMinutes();
+    var dt= date_now.getSeconds();
+
+    if(jm<10){
+        jm="0"+jm;
+    }
+    if(mn<10){
+        mn="0"+mn;
+    }
+    if(dt<10){
+        dt="0"+dt;
+    }
+    jam.textContent=jm;
+    menit.textContent=mn;
+    detik.textContent=dt;
+},1000
+
+);
+</script>
+<br>
+<br>
+<h5><b>Bagaimana? Apakah kalian tertarik dengan komunitas kami?</b></h5>
+<form style="font-family: Arial, Helvetica, sans-serif; padding-left: 50px; padding-right: 30px; font-size: large; text-align: left;">
+<input type="radio" id="Yes" name="fav_language" value="Tertarik banget">
+<label for="Yes">Tertarik Banget</label><br>
+<input type="radio" id="No" name="fav_language" value="Sayang sekali, belum">
+<label for="No">Sayang sekali, belum</label><br>
+<br>
+<h5>Yuk yang sudah yakin segera daftarkan diri kamu, ya!</h5>
+<label for="name">Nama</label><br>
+<input type="text" id="name" name="name" value=""><br>
+<br>
+<label for="tlp">No. Telpon</label><br>
+<input type="text" id="tlp" name="tlp" value=""><br>
+<br>
+<label for="kategori">Pilih kategori:</label>
+  <select id="kategori" name="kategori">
+    <option value="pelajar">Pelajar</option>
+    <option value="mahasiswa">Mahasiswa</option>
+    <option value="umum">Umum</option>
+  </select>
+<br>
+<br>
+<p style="text-align: left;">Alasan ingin bergabung:</p>
+<textarea name="message" rows="10" cols="30"></textarea>
+<br>
+<br>
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+<br>
+<br>
+<footer class="footer">
+    <br>
+    <br>
+    <div class="footer-media">
+        <div>
+            <a href="https://www.instagram.com/pedulikita.community/" target="_blank" title="instagram"><i class="fa-brands fa-instagram"></i></a> 
+            <a href="https://wa.me/6281315008053" target="_blank" title="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            
+        </div>
+        </div>
+        <br>
+    <h2 class="footer-alamat">Indonesia, Banten  <br> Tangerang Selatan, Ciputat Timur</h2>
+    <p class="footer-copyright">©2023 by Agnes Putri Afdzilla</p>
+
+
+</footer>
+
+
+</body>
+</html>
